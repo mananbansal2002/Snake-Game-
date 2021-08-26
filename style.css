@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
+
+
+
+*{
+margin:0;
+padding:0;
+}
+
+.body{
+background:url("https://th.bing.com/th/id/R.fca4f1b0a1f7a1d1e05ce9d62a9b44af?rik=91C1IDmMX%2bYaJw&riu=http%3a%2f%2fwallpoper.com%2fimages%2f00%2f33%2f99%2f90%2fouter-space_00339990.jpg&ehk=YNkGNqUjAeU7ULYRKKuxQbfXyUaCbEMMJYIOZJD1O8o%3d&risl=&pid=ImgRaw&r=0");
+min-width:100vw;
+min-height:100vh;
+background-size:100vw 100vh;
+background-repeat:no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+#board
+{
+background:black;
+width: 70vmin;
+height: 70vmin;
+border: 2px solid white;
+display:grid;
+grid-template-rows:repeat(18,1fr);
+grid-template-columns:repeat(18,1fr);
+}
+
+.snake{
+background-color:lightgreen;
+
+
+}
+
+.head{
+background-color:green;
+}
+
+.food{
+background-color:chocolate;
+border-radius:3px;
+}
+
+#score{
+position:absolute;
+top: 20px;
+color:white;
+right:100px;
+font-size: 30px;
+font-family: 'Klee One', cursive;
+}
