@@ -4,7 +4,7 @@ let lastPaintTime=0;
 let snake=[{x: 13,y: 15}];
 let food={x:6,y:7};
 let scorejs=0;
-
+let hiscore=0;
 
 function main(ctime){
     window.requestAnimationFrame(main);
@@ -20,6 +20,8 @@ function gameengine(){
     
     if(iscollide(snake)){
         indir={x:0,y:0};
+	scorejs=0;
+	score.innerHTML="Score : 0";
         alert("Game Over");
         snake=[{x: 13,y: 15}];
     }
@@ -33,6 +35,11 @@ function gameengine(){
             snake.unshift({x:snake[0].x+indir.x,y:snake[0].y+indir.y});
             food={x:Math.round(a+(b-a)*Math.random()),y:Math.round(a+(b-a)*Math.random())};
             scorejs+=10;
+	    if(scorejs>hiscore)
+	   { 
+		hiscore=scorejs;
+		Hiscore.innerHTML="Hi-Score : "+ hiscore;
+	}	
             score.innerHTML="Score : "+ scorejs;
         }
     
